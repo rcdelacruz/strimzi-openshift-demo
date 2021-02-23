@@ -4,6 +4,23 @@ metadata:
   name: grafanas.integreatly.org
 spec:
   group: integreatly.org
+  versions:
+    - name: v1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            spec:
+              type: object
+              properties:
+                cronSpec:
+                  type: string
+                image:
+                  type: string
+                replicas:
+                  type: integer
   names:
     kind: Grafana
     listKind: GrafanaList
@@ -12,7 +29,7 @@ spec:
   scope: Namespaced
   subresources:
     status: {}
-  version: v1alpha1
+    
   validation:
     openAPIV3Schema:
       required: ["spec"]

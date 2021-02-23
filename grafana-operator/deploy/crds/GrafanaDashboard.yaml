@@ -4,6 +4,23 @@ metadata:
   name: grafanadashboards.integreatly.org
 spec:
   group: integreatly.org
+  versions:
+    - name: v1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            spec:
+              type: object
+              properties:
+                cronSpec:
+                  type: string
+                image:
+                  type: string
+                replicas:
+                  type: integer
   names:
     kind: GrafanaDashboard
     listKind: GrafanaDashboardList
