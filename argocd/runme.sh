@@ -8,15 +8,15 @@ argo_namespace="argocd"
 new_password="admin123"
 argo_version="1.4.2"
 repo1_url="https://github.com/ably77/iot-argocd"
-repo2_url="https://github.com/ably77/strimzi-loadtest"
-repo3_url="https://github.com/ably77/strimzi-demo-prometheus"
-repo4_url="https://github.com/ably77/strimzi-demo-grafana"
-repo5_url="https://github.com/ably77/strimzi-demo-kafka"
-repo6_url="https://github.com/ably77/strimzi-demo-codeready"
-repo7_url="https://github.com/ably77/strimzi-demo-shared"
-repo8_url="https://github.com/ably77/strimzi-demo-tekton"
-repo9_url="https://github.com/ably77/strimzi-demo-voteapp-pipeline"
-repo10_url="https://github.com/ably77/strimzi-demo-voteapp"
+# repo2_url="https://github.com/ably77/strimzi-loadtest"
+# repo3_url="https://github.com/ably77/strimzi-demo-prometheus"
+# repo4_url="https://github.com/ably77/strimzi-demo-grafana"
+# repo5_url="https://github.com/ably77/strimzi-demo-kafka"
+# repo6_url="https://github.com/ably77/strimzi-demo-codeready"
+# repo7_url="https://github.com/ably77/strimzi-demo-shared"
+# repo8_url="https://github.com/ably77/strimzi-demo-tekton"
+# repo9_url="https://github.com/ably77/strimzi-demo-voteapp-pipeline"
+# repo10_url="https://github.com/ably77/strimzi-demo-voteapp"
 
 # Create a new namespace for ArgoCD components
 oc new-project ${argo_namespace}
@@ -63,12 +63,12 @@ argocd --insecure --grpc-web --server ${argocd_route}:443 account update-passwor
 
 # Add repo to be managed to argo repositories
 argocd repo add ${repo1_url} --username ${username} --password ${password}
-argocd repo add ${repo2_url} --username ${username} --password ${password}
-argocd repo add ${repo3_url} --username ${username} --password ${password}
-argocd repo add ${repo4_url} --username ${username} --password ${password}
-argocd repo add ${repo5_url} --username ${username} --password ${password}
-argocd repo add ${repo6_url} --username ${username} --password ${password}
-argocd repo add ${repo7_url} --username ${username} --password ${password}
-argocd repo add ${repo8_url} --username ${username} --password ${password}
-argocd repo add ${repo9_url} --username ${username} --password ${password}
-argocd repo add ${repo10_url} --username ${username} --password ${password}
+# argocd repo add ${repo2_url} --username ${username} --password ${password}
+# argocd repo add ${repo3_url} --username ${username} --password ${password}
+# argocd repo add ${repo4_url} --username ${username} --password ${password}
+# argocd repo add ${repo5_url} --username ${username} --password ${password}
+# argocd repo add ${repo6_url} --username ${username} --password ${password}
+# argocd repo add ${repo7_url} --username ${username} --password ${password}
+# argocd repo add ${repo8_url} --username ${username} --password ${password}
+# argocd repo add ${repo9_url} --username ${username} --password ${password}
+# argocd repo add ${repo10_url} --username ${username} --password ${password}
