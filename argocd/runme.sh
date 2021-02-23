@@ -1,8 +1,11 @@
 #!/bin/bash
 
+#github account
+username="rcdelacruz"
+password="30de0478ef71cc60240859fd4c058bea7c4110d3"
 # argo deployment varaiables
 argo_namespace="argocd"
-new_password="secret"
+new_password="admin123"
 argo_version="1.4.2"
 repo1_url="https://github.com/ably77/iot-argocd"
 repo2_url="https://github.com/ably77/strimzi-loadtest"
@@ -59,13 +62,13 @@ argocd --insecure --grpc-web --server ${argocd_route}:443 account update-passwor
 #open http://${argocd_route}
 
 # Add repo to be managed to argo repositories
-argocd repo add ${repo1_url}
-argocd repo add ${repo2_url}
-argocd repo add ${repo3_url}
-argocd repo add ${repo4_url}
-argocd repo add ${repo5_url}
-argocd repo add ${repo6_url}
-argocd repo add ${repo7_url}
-argocd repo add ${repo8_url}
-argocd repo add ${repo9_url}
-argocd repo add ${repo10_url}
+argocd repo add ${repo1_url} --username ${username} --password ${password}
+argocd repo add ${repo2_url} --username ${username} --password ${password}
+argocd repo add ${repo3_url} --username ${username} --password ${password}
+argocd repo add ${repo4_url} --username ${username} --password ${password}
+argocd repo add ${repo5_url} --username ${username} --password ${password}
+argocd repo add ${repo6_url} --username ${username} --password ${password}
+argocd repo add ${repo7_url} --username ${username} --password ${password}
+argocd repo add ${repo8_url} --username ${username} --password ${password}
+argocd repo add ${repo9_url} --username ${username} --password ${password}
+argocd repo add ${repo10_url} --username ${username} --password ${password}
